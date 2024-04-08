@@ -10,7 +10,7 @@ This is a basic wrapper around Ethers.js with static methods for interacting wit
 ### How To Use
 
 ```js
-import {ERC20} from "erc-token-utils"
+import {ERC20} from "@xdapps/erc-token-utils"
 const contractAddress = "0x.....";
 const provider = new ethers.JsonRpcProvider("RPC_URL_ADDRESS");
 const name = await ERC20.getName(contractAddress, provider);
