@@ -1,0 +1,19 @@
+{
+  "name": "@xdapps/erc-token-utils",
+  "version": "1.0.0",
+  "description": "Basic functions to interact with standard ERC protocols using Ethers.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "types": "lib",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "author": "XDev",
+  "license": "ISC",
+  "dependencies": {
+    "ethers": "^6.11.1",
+    "mathjs": "^12.4.1"
+  }
+}
