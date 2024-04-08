@@ -19,7 +19,7 @@ const decimals = await ERC20.getDecimals(contractAddress, provider);
 const supply = await ERC20.getTotalSupply(contractAddress, provider);
 const balance = await ERC20.balanceOf(contractAddress, provider);
 //This method would require a provider with signer.
-const wallet = ethers.Wallet.fromMnemonic(process.env.mnemonic);; //
+const wallet = ethers.Wallet.fromMnemonic(process.env.MNEMONIC);; //
 const walletWithProvider = wallet.connect(this.provider);
 const txResult = await ERC20.transferFrom(contractAddress, provider);
 ```
