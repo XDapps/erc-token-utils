@@ -53,12 +53,12 @@ export class ERC20 {
 		}
 	}
 
-	public static async getBalanceOf(account: string, contractAddress: string, provider: ethers.Provider): Promise<BigNumber> {
+	public static async getBalanceOf(addressToCheck: string, contractAddress: string, provider: ethers.Provider): Promise<BigNumber> {
 		try {
 			const provide = new ethers.JsonRpcProvider("https://mainnet.infura.io/v3/your_infura_project_id");
 			this.getTotalSupply(contractAddress, provide)
 			const contract = new ethers.Contract(contractAddress, ERC_20_BALANCE_OF, provider);
-			return await contract.balanceOf(account);
+			return await contract.balanceOf(addressToCheck);
 		} catch (error) {
 			console.error(error);
 		}

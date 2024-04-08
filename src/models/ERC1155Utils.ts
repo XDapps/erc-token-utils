@@ -24,19 +24,19 @@ export class ERC1155 {
 		}
 	}
 
-	public static async balanceOf(account: string, tokenId: string, contractAddress: string, provider: ethers.Provider): Promise<BigNumber> {
+	public static async balanceOf(addressToCheck: string, tokenId: string, contractAddress: string, provider: ethers.Provider): Promise<BigNumber> {
 		try {
 			const contract = new ethers.Contract(contractAddress, ERC_1155_BALANCE_OF, provider);
-			return await contract.balanceOf(account, tokenId);
+			return await contract.balanceOf(addressToCheck, tokenId);
 		} catch (error) {
 			console.error(error);
 		}
 	}
 
-	public static async balanceOfBatch(accounts: string[], tokenIds: string[], contractAddress: string, provider: ethers.Provider): Promise<BigNumber[]> {
+	public static async balanceOfBatch(addresses: string[], tokenIds: string[], contractAddress: string, provider: ethers.Provider): Promise<BigNumber[]> {
 		try {
 			const contract = new ethers.Contract(contractAddress, ERC_1155_BALANCE_OF_BATCH, provider);
-			return await contract.balanceOfBatch(accounts, tokenIds);
+			return await contract.balanceOfBatch(addresses, tokenIds);
 		} catch (error) {
 			console.error(error);
 		}
