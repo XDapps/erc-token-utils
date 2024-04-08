@@ -1,6 +1,6 @@
 {
   "name": "@xdapps/erc-token-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Basic functions to interact with standard ERC protocols using Ethers.js",
   "main": "index.js",
   "scripts": {
