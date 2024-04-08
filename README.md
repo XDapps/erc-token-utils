@@ -13,10 +13,13 @@ This is a basic wrapper around Ethers.js with static methods for interacting wit
 import {ERC20} from "erc-token-utils"
 const contractAddress = "0x.....";
 const provider = new ethers.JsonRpcProvider("RPC_URL_ADDRESS");
-const balance = await ERC20.getName(contractAddress, provider);
-const balance = await ERC20.getSymbol(contractAddress, provider);
-const balance = await ERC20.getDecimals(contractAddress, provider);
-const balance = await ERC20.getTotalSupply(contractAddress, provider);
+const name = await ERC20.getName(contractAddress, provider);
+const symbol = await ERC20.getSymbol(contractAddress, provider);
+const decimals = await ERC20.getDecimals(contractAddress, provider);
+const supply = await ERC20.getTotalSupply(contractAddress, provider);
 const balance = await ERC20.balanceOf(contractAddress, provider);
-const balance = await ERC20.transferFrom(contractAddress, provider);
+//This method would require a provider with signer.
+const wallet = ethers.Wallet.fromMnemonic(process.env.mnemonic);; //
+const walletWithProvider = wallet.connect(this.provider);
+const txResult = await ERC20.transferFrom(contractAddress, provider);
 ```

@@ -4,7 +4,7 @@
   "description": "Basic functions to interact with standard ERC protocols using Ethers.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p ."
   },
   "types": "lib",
   "publishConfig": {
@@ -15,5 +15,8 @@
   "dependencies": {
     "ethers": "^6.11.1",
     "mathjs": "^12.4.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.4"
   }
 }
