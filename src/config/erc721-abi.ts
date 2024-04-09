@@ -1,4 +1,4 @@
-export const erc721EventsAbi = [
+export const ERC_721_EVENTS = [
 	'event ApprovalForAll(address owner, address operator, bool approved)',
 	'event Approval(address owner, address approved, uint256 tokenId)',
 	'event Transfer(address from, address to, uint256 tokenId)'

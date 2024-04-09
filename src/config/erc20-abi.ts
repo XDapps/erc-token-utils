@@ -1,4 +1,4 @@
-export const erc20EventsAbi = [
+export const ERC_20_EVENTS = [
 	'event Transfer(address from, address to, uint256 value)',
 	'event Approval(address owner, address spender, uint256 value)'
 ];
